@@ -21,13 +21,19 @@
             </div>
         </div>
         <ul class = "nav_links" id="nav-links">
-            <li><a href ="#catalogue">CATALOGUE</a></li>
+            <li><a href="catalogue.html">CATALOGUE</a></li>
+            <!--
             <li><a href ="#fashion">FASHION</a></li>
             <li><a href ="#favourite">FAVORITE</a></li>
             <li><a href ="#lifestyle">LIFESTYLE</a></li>
-            <li>
-                <button class = "btn">SIGN UP</button>
-            </li>
+        -->
+    <li>
+    <a href="checkout.html">
+        <button class="btn cart_btn">
+            <i class="ri-shopping-cart-fill"></i>
+        </button>
+    </a>
+</li>
         </ul>
     </nav>
     <header>
@@ -42,11 +48,11 @@
             </h1>
             <p>Live for Rutgers Rugby merch and support</p>
             <div class="header_btns">
-            <button class="btn">Shop Now</button>
+            <a href="catalogue.html" class="btn">Shop Now</a>
           </div>
          </div>
          <div class="header_image">
-            <img src="assets/OIP.jpg" alt = "header"/>
+            <img src="assets/OIP.webp" alt = "header"/>
         </div>
         </div>
     </header>
@@ -62,41 +68,43 @@
     <section class= "section_container arrival_container" id="catalogue">
         <h2 class="section_header">New Arrivals</h2>
         <div class = "arrival_grid">
-            <div class="arrival_card">
-                <div class="arrival_image">
-                    <img src="assets/header.webp" alt="arrival" />
-                </div>
-                    <div class="arrival_content">
-                        <div>
-                        <h4>Hoodies & Sweatshirts</h4>
-                        <a href="#"> Explore Now</a>
-                        </div>
-                        <span><i class="ri-arrow-right-line"></i></span>
-                    </div>
-            </div>
-            <div class="arrival_card">
-                <div class="arrival_image">
-                    <img src="assets/header.webp" alt="arrival" />
-                </div>
-                    <div class="arrival_content">
-                        <div>
-                        <h4>Tops</h4>
-                        <a href="#"> Explore Now</a>
-                        </div>
-                        <span><i class="ri-arrow-right-line"></i></span>
-                    </div>
-            </div><div class="arrival_card">
-                <div class="arrival_image">
-                    <img src="assets/header.webp" alt="arrival" />
-                </div>
-                    <div class="arrival_content">
-                        <div>
-                        <h4>Bottoms</h4>
-                        <a href="#"> Explore Now</a>
-                        </div>
-                        <span><i class="ri-arrow-right-line"></i></span>
-                    </div>
-            </div>
+            <a href="Hoodies&Sweaters.html" class="arrival_card">
+    <div class="arrival_image">
+        <img src="assets/crewneck_mockup.png" alt="arrival" />
+    </div>
+    <div class="arrival_content">
+        <div>
+            <h4>Hoodies & Sweatshirts</h4>
+            <span class="explore_link">Explore Now</span>
+        </div>
+        <span><i class="ri-arrow-right-line"></i></span>
+    </div>
+</a>
+            <a href="Tops.html" class="arrival_card">
+    <div class="arrival_image">
+        <img src="assets/recruit..png" alt="arrival" />
+    </div>
+    <div class="arrival_content">
+        <div>
+            <h4>Tops</h4>
+            <span class="explore_link">Explore Now</span>
+        </div>
+        <span><i class="ri-arrow-right-line"></i></span>
+    </div>
+</a>
+
+<a href="Bottoms.html" class="arrival_card">
+    <div class="arrival_image">
+        <img src="assets/sweatpant2.jpg" alt="arrival" />
+    </div>
+    <div class="arrival_content">
+        <div>
+            <h4>Bottoms</h4>
+            <span class="explore_link">Explore Now</span>
+        </div>
+        <span><i class="ri-arrow-right-line"></i></span>
+    </div>
+</a>
         </div>
     <!--       
     </section>
@@ -183,21 +191,21 @@
         <div class="section_container footer_container">
             <div class="footer_col">
                 <div class="footer_logo">
-                    <a href="#">FASHION</a>
+                    <a href="#">RUTGERS RUGBY</a>
                 </div>
-                <p>Complete your style with awesome clothes from us.</p>
+                <p>Support Black Death Rugby with awesone merch from us</p>
                 <ul class="footer_socials">
                 <li>
-                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="https://www.facebook.com/RutgersRugby/" target="_blank" rel="noopener noreferrer"><i class="ri-facebook-fill"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="ri-instagram-line"></i></i></a>
+                    <a href="https://www.instagram.com/rutgersclubrugby/?hl=en" target="_blank" rel="noopener noreferrer"><i class="ri-instagram-line"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="ri-twitter-x-fill"></i></i></a>
+                    <a href="https://x.com/RutgersRugby" target="_blank" rel="noopener noreferrer"><i class="ri-twitter-x-fill"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="ri-linkedin-fill"></i></i></a>
+                    <a href="#"><i class="ri-linkedin-fill"></i></a>
                 </li>
                 </ul>
             </div>
@@ -205,12 +213,29 @@
                 <h4>Rutgers Rugby</h4>
                 <ul class="footer_links">
                 <li><a href="#">About</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Support</a></li>
+                <li><a href="#" id="contact-us-btn">Contact Us</a></li>
+                <li><a href="mailto:blackdeathmerchsupport@gmail.com?subject=Customer%20Support">Support</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+    <div class="modal_overlay" id="support-modal">
+    <div class="modal_box">
+        <button class="modal_close" id="modal-close-btn">
+            <i class="ri-close-line"></i>
+        </button>
+        <h3>How can we help?</h3>
+        <p>Get order support or help fuel the team</p>
+        <div class="modal_options">
+            <a href="mailto:blackdeathmerchsupport@gmail.com?subject=Customer%20Support%20Request" class="btn modal_btn">
+                Customer Support
+            </a>
+            <a href="mailto:blackdeathmerchsupport@gmail.com?subject=Team%20Support%20Request" class="btn modal_btn">
+                Support the Team
+            </a>
+        </div>
+    </div>
+</div>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
  </body>

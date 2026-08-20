@@ -2,6 +2,7 @@ const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 
+
 menuBtn.addEventListener("click",(e) => {
     navLinks.classList.toggle("open");
 
@@ -39,13 +40,15 @@ ScrollReveal().reveal(".header_btns", {
 
 const banner = document.querySelector(".banner_container");
 
-const bannerContent = Array.from(banner.children);
+if (banner) {
+    const bannerContent = Array.from(banner.children);
 
-bannerContent.forEach((item) => {
-    const duplicateNode = item.cloneNode(true);
-    duplicateNode.setAttribute("aria-hidden", true);
-    banner.appendChild(duplicateNode);
-});
+    bannerContent.forEach((item) => {
+        const duplicateNode = item.cloneNode(true);
+        duplicateNode.setAttribute("aria-hidden", true);
+        banner.appendChild(duplicateNode);
+    });
+}
 
 ScrollReveal().reveal(".arrival_card", {
     ...scrollRevealOption,
@@ -75,4 +78,42 @@ ScrollReveal().reveal(".sale_btns", {
 ScrollReveal().reveal(".favourite_card", {
     ...scrollRevealOption,
     interval: 500,
+});
+const contactUsBtn = document.getElementById("contact-us-btn");
+const supportModal = document.getElementById("support-modal");
+const modalCloseBtn = document.getElementById("modal-close-btn");
+contactUsBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    supportModal.classList.add("open");
+});
+
+modalCloseBtn.addEventListener("click", () => {
+    supportModal.classList.remove("open");
+});
+
+supportModal.addEventListener("click", (e) => {
+    if (e.target === supportModal) {
+        supportModal.classList.remove("open");
+    }
+});
+
+document.querySelectorAll(".qty_btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const qtySpan = btn.parentElement.querySelector(".qty_value");
+        let qty = parseInt(qtySpan.textContent);
+
+        if (btn.dataset.action === "increase") {
+            qty++;
+        } else if (btn.dataset.action === "decrease" && qty > 1) {
+            qty--;
+        }
+
+        qtySpan.textContent = qty;
+    });
+});
+
+document.querySelectorAll(".checkout_item_remove").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        btn.closest(".checkout_item").remove();
+    });
 });

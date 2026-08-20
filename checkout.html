@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Rutgers Rugby | Checkout</title>
+</head>
+<body>
+    <header class="catalogue_header">
+        <div class="section_container catalogue_header_container">
+            <div class="catalogue_header_text">
+                <h1>Your Cart</h1>
+                <p>Review your items before checkout</p>
+            </div>
+            <div class="catalogue_header_btns">
+                <a href="index.html" class="btn icon_btn">
+                    <i class="ri-home-4-line"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section_container checkout_page">
+        <div class="checkout_grid">
+
+            <!-- LEFT: CART ITEMS -->
+            <div class="checkout_items">
+                <div class="checkout_items_header">
+                    <label class="checkout_checkbox">
+                        <input type="checkbox" checked>
+                        <span>All Items (3)</span>
+                    </label>
+                </div>
+
+                <div class="checkout_item">
+                    <label class="checkout_checkbox">
+                        <input type="checkbox" checked>
+                    </label>
+                    <div class="checkout_item_image">
+                        <img src="assets/crewneck_mockup.png" alt="Crewneck">
+                    </div>
+                    <div class="checkout_item_details">
+                        <h4>Black Death Crewneck</h4>
+                        <p class="checkout_item_variant">Black / M</p>
+                        <div class="checkout_item_footer">
+                            <span class="checkout_item_price">$45.00</span>
+                            <div class="checkout_item_qty">
+                                <button class="qty_btn" data-action="decrease">−</button>
+                                <span class="qty_value">1</span>
+                                <button class="qty_btn" data-action="increase">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="checkout_item_remove">
+                        <i class="ri-delete-bin-line"></i>
+                    </button>
+                </div>
+
+                <div class="checkout_item">
+                    <label class="checkout_checkbox">
+                        <input type="checkbox" checked>
+                    </label>
+                    <div class="checkout_item_image">
+                        <img src="assets/recruit..png" alt="Rugby Tee">
+                    </div>
+                    <div class="checkout_item_details">
+                        <h4>Rugby Tee</h4>
+                        <p class="checkout_item_variant">Black / L</p>
+                        <div class="checkout_item_footer">
+                            <span class="checkout_item_price">$25.00</span>
+                            <div class="checkout_item_qty">
+                                <button class="qty_btn" data-action="decrease">−</button>
+                                <span class="qty_value">1</span>
+                                <button class="qty_btn" data-action="increase">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="checkout_item_remove">
+                        <i class="ri-delete-bin-line"></i>
+                    </button>
+                </div>
+
+                <div class="checkout_item">
+                    <label class="checkout_checkbox">
+                        <input type="checkbox" checked>
+                    </label>
+                    <div class="checkout_item_image">
+                        <img src="assets/sweatpant2.jpg" alt="Sweatpants">
+                    </div>
+                    <div class="checkout_item_details">
+                        <h4>Sweatpants</h4>
+                        <p class="checkout_item_variant">Black / M</p>
+                        <div class="checkout_item_footer">
+                            <span class="checkout_item_price">$40.00</span>
+                            <div class="checkout_item_qty">
+                                <button class="qty_btn" data-action="decrease">−</button>
+                                <span class="qty_value">1</span>
+                                <button class="qty_btn" data-action="increase">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="checkout_item_remove">
+                        <i class="ri-delete-bin-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- RIGHT: ORDER SUMMARY -->
+            <div class="checkout_summary">
+                <div class="summary_card">
+                    <h3>Order Summary</h3>
+                    <p class="summary_subtext">Review your total before you check out</p>
+
+                    <div class="summary_thumbs">
+                        <img src="assets/crewneck_mockup.png" alt="item">
+                        <img src="assets/recruit..png" alt="item">
+                        <img src="assets/sweatpant2.jpg" alt="item">
+                    </div>
+
+                    <div class="summary_row">
+                        <span>Subtotal</span>
+                        <span>$110.00</span>
+                    </div>
+                    <div class="summary_row">
+                        <span>Shipping</span>
+                        <span>Free</span>
+                    </div>
+                    <div class="summary_row summary_total">
+                        <span>Total</span>
+                        <span>$110.00</span>
+                    </div>
+
+                    <button class="btn checkout_btn">Checkout Now (3)</button>
+                </div>
+
+                <div class="summary_card">
+                    <h3>We Accept</h3>
+                    <div class="payment_icons">
+                        <i class="ri-visa-line"></i>
+                        <i class="ri-mastercard-line"></i>
+                        <i class="ri-paypal-line"></i>
+                        <i class="ri-apple-fill"></i>
+                        <i class="ri-google-fill"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <!-- same footer as index.html -->
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
