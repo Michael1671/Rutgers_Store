@@ -22,18 +22,12 @@
         </div>
         <ul class = "nav_links" id="nav-links">
             <li><a href="catalogue.html">CATALOGUE</a></li>
-            <!--
-            <li><a href ="#fashion">FASHION</a></li>
-            <li><a href ="#favourite">FAVORITE</a></li>
-            <li><a href ="#lifestyle">LIFESTYLE</a></li>
-        -->
-    <li>
-    <a href="checkout.html">
-        <button class="btn cart_btn">
-            <i class="ri-shopping-cart-fill"></i>
-        </button>
-    </a>
-</li>
+           <li>
+            <a href="checkout.html" class="btn icon_btn cart_btn" style="position: relative;">
+                <i class="ri-shopping-cart-fill"></i>
+                <span class="cart-count" style="display:none; position:absolute; top:-6px; right:-6px; background: var(--white); color: var(--primary-color); font-size: 0.7rem; font-weight: 700; min-width: 18px; height: 18px; border-radius: 999px; align-items:center; justify-content:center;">0</span>
+            </a>
+           </li>
         </ul>
     </nav>
     <header>
@@ -106,94 +100,13 @@
     </div>
 </a>
         </div>
-    <!--       
-    </section>
-    <section class="sale" id="fashion">
-        <div class="section_container sale_container">
-            <div class="sale_image">
-                <img src="assets/sale.png" alt="sale" />
-            </div>
-            <div class="sale_content">
-                <h2><span>PAYDAY</span><br />SALE NOW</h2>
-                <p>
-                    SALE TEXT TO BE EDITED
-                </p>
-                <h4>DATE TBA</h4>
-                <p>*Terms and conditions apply</p>
-                <div class="sale_btn">
-                    <button class="btn">Shop Now</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section_container favourite_container" id=""favourite>
-        <h2 class="section_header">Young's Favourite</h2>
-        <div class="favourite_grid">
-            <div class="favourite_card">
-                <div class="favourite_image">
-                    <img src="assets/banner-1.png" alt="favourite" />
-                </div>
-                <div class=" favourite_content">
-                    <div>
-                        <h4>Trending on instagram</h4>
-                        <a href="#">Explore Now</a>
-                    </div>
-                    <span><i class="ri-arrow-right-line"></i></span>
-                </div>
-            </div>
-            <div class="favourite_card">
-                <div class="favourite_image">
-                    <img src="assets/banner-2.png" alt="favourite" />
-                </div>
-                <div class=" favourite_content">
-                    <div>
-                        <h4>All under $40</h4>
-                        <a href="#">Explore Now</a>
-                    </div>
-                    <span><i class="ri-arrow-right-line"></i></span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section_conteoner download_container" id="lifestye">
-        <div class="download_image">
-            <img src="assets/OIP.jpg" alt="download"/>
-        </div>
-        <div class="download content">
-            <h2 class="section_header">DOWNLOAD APP & GET THE VOUCHER!</h2>
-            <p>
-                DEAL TEXT
-            </p>
-            <div class="download_links">
-                <a href="#">
-                    <img src="assets/apple.png" alt="apple">
-                </a>
-                <a href="#">
-                    <img src="assets/google.png" alt = "google"/>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="promo">
-        <div class=""section_container promo_container>
-            <h2 class ="section_header">
-                JOIN SHOPPING COMMUNITY TO GET MONTHLY PROMO
-            </h2>
-            <p>Tye your email down below</p>
-            <form action="/">
-                <input tyoe="text" placeholder="Add your email here">
-                <button class="btn">SEND</button>
-            </form>
-        </div>
-    </section>
--->
     <footer>
         <div class="section_container footer_container">
             <div class="footer_col">
                 <div class="footer_logo">
                     <a href="#">RUTGERS RUGBY</a>
                 </div>
-                <p>Support Black Death Rugby with awesone merch from us</p>
+                <p>Support Black Death Rugby with awesome merch from us</p>
                 <ul class="footer_socials">
                 <li>
                     <a href="https://www.facebook.com/RutgersRugby/" target="_blank" rel="noopener noreferrer"><i class="ri-facebook-fill"></i></a>
@@ -226,6 +139,7 @@
         </button>
         <h3>How can we help?</h3>
         <p>Get order support or help fuel the team</p>
+        <p>Contact us at BlackDeathMerchSupport@gmail.com</p>
         <div class="modal_options">
             <a href="mailto:blackdeathmerchsupport@gmail.com?subject=Customer%20Support%20Request" class="btn modal_btn">
                 Customer Support
@@ -237,6 +151,7 @@
     </div>
 </div>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="cart.js"></script>
     <script src="main.js"></script>
  </body>
 </html>

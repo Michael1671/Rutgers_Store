@@ -148,6 +148,11 @@ nav{
     color: var(--text-dark);
 }
 
+.nav_links a.cart_btn,
+.nav_links a.cart_btn:hover {
+    color: var(--white);
+}
+
 header {
     padding-top: 5rem;
     padding-inline: 1rem;
@@ -168,6 +173,7 @@ header {
 
 .header_content {
     flex: 1 1 300px;
+    max-width: none;
     text-align: center;
 }
 
@@ -660,6 +666,12 @@ footer{
     background-color: var(--extra-light);
 }
 
+/* Make the <a> wrapper around the product image invisible to layout so the
+   image renders exactly as it did before it became clickable. */
+.product_image a {
+    display: contents;
+}
+
 .product_image img {
     width: 100%;
     height: 100%;
@@ -947,6 +959,25 @@ footer{
     font-size: 0.9rem;
     color: var(--text-light);
     margin-bottom: 0.75rem;
+}
+
+.checkout_item_size_select {
+    display: block;
+    margin-bottom: 0.75rem;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--extra-light);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.checkout_item_size_select:hover,
+.checkout_item_size_select:focus {
+    border-color: var(--primary-color);
+    outline: none;
 }
 
 .checkout_item_footer {

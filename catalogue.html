@@ -18,63 +18,70 @@
                 <a href="index.html" class="btn icon_btn">
                     <i class="ri-home-4-line"></i>
                 </a>
-                <button class="btn icon_btn cart_btn">
+                <a href="checkout.html" class="btn icon_btn cart_btn" style="position: relative;">
                     <i class="ri-shopping-cart-fill"></i>
-                </button>
+                    <span class="cart-count" style="display:none; position:absolute; top:-6px; right:-6px; background: var(--white); color: var(--primary-color); font-size: 0.7rem; font-weight: 700; min-width: 18px; height: 18px; border-radius: 999px; align-items:center; justify-content:center;">0</span>
+                </a>
             </div>
         </div>
     </header>
 
     <section class="section_container catalogue_page">
         <div class="catalogue_grid">
-            <div class="product_card">
+            <div class="product_card"
+                 data-id="crewneck" data-name="Black Death Crewneck" data-price="45.00" data-image="assets/crewneck_mockup.png">
                 <div class="product_image">
-                    <img src="assets/crewneck_mockup.png" alt="Crewneck">
+                    <a class="btn" href="selection.html?id=crewneck&name=Black%20Death%20Crewneck&price=45.00&image=assets%2Fcrewneck_mockup.png"><img src="assets/crewneck_mockup.png" alt="Crewneck"></a>
                 </div>
                 <h4>Black Death Crewneck</h4>
                 <p>$45.00</p>
-                <button class="btn">Add to Cart</button>
+                <a class="btn" href="selection.html?id=crewneck&name=Black%20Death%20Crewneck&price=45.00&image=assets%2Fcrewneck_mockup.png">Select Size</a>
             </div>
-            <div class="product_card">
+            <div class="product_card"
+                 data-id="rugby-tee" data-name="Rugby Tee" data-price="25.00" data-image="assets/recruit..png">
                 <div class="product_image">
-                    <img src="assets/recruit..png" alt="Rugby Tee">
+                    <a class="btn" href="selection.html?id=rugby-tee&name=Rugby%20Tee&price=25.00&image=assets%2Frecruit..png"><img src="assets/recruit..png" alt="Rugby Tee"></a>
                 </div>
                 <h4>Rugby Tee</h4>
                 <p>$25.00</p>
-                <button class="btn">Add to Cart</button>
+                <a class="btn" href="selection.html?id=rugby-tee&name=Rugby%20Tee&price=25.00&image=assets%2Frecruit..png">Select Size</a>
             </div>
-            <div class="product_card">
+            <div class="product_card"
+                 data-id="sweatpants" data-name="Sweatpants" data-price="40.00" data-image="assets/sweatpant2.jpg">
                 <div class="product_image">
-                    <img src="assets/sweatpant2.jpg" alt="Sweatpants">
+                    <a class="btn" href="selection.html?id=sweatpants&name=Sweatpants&price=40.00&image=assets%2Fsweatpant2.jpg"><img src="assets/sweatpant2.jpg" alt="Sweatpants"></a>
                 </div>
                 <h4>Sweatpants</h4>
                 <p>$40.00</p>
-                <button class="btn">Add to Cart</button>
+                <a class="btn" href="selection.html?id=sweatpants&name=Sweatpants&price=40.00&image=assets%2Fsweatpant2.jpg">Select Size</a>
             </div>
 
-            <div class="product_card">
+            <div class="product_card"
+                 data-id="crewneck" data-name="Black Death Crewneck" data-price="45.00" data-image="assets/crewneck_mockup.png">
                 <div class="product_image">
-                    <img src="assets/crewneck_mockup.png" alt="Crewneck">
+                    <a class="btn" href="selection.html?id=crewneck&name=Black%20Death%20Crewneck&price=45.00&image=assets%2Fcrewneck_mockup.png"><img src="assets/crewneck_mockup.png" alt="Crewneck"></a>
                 </div>
                 <h4>Black Death Crewneck</h4>
                 <p>$45.00</p>
-                <button class="btn">Add to Cart</button>
+                <a class="btn" href="selection.html?id=crewneck&name=Black%20Death%20Crewneck&price=45.00&image=assets%2Fcrewneck_mockup.png">Select Size</a>
             </div>
-            <div class="product_card">
+            <div class="product_card"
+                 data-id="rugby-tee" data-name="Rugby Tee" data-price="25.00" data-image="assets/recruit..png">
                 <div class="product_image">
-                    <img src="assets/recruit..png" alt="Rugby Tee">
+                    <a class="btn" href="selection.html?id=rugby-tee&name=Rugby%20Tee&price=25.00&image=assets%2Frecruit..png"><img src="assets/recruit..png" alt="Rugby Tee"></a>
                 </div>
                 <h4>Rugby Tee</h4>
                 <p>$25.00</p>
-                <button class="btn">Add to Cart</button>
+                <a class="btn" href="selection.html?id=rugby-tee&name=Rugby%20Tee&price=25.00&image=assets%2Frecruit..png">Select Size</a>
             </div>
-            <div class="product_card">
+            <div class="product_card"
+                 data-id="shorts" data-name="Shorts" data-price="40.00" data-image="assets/short1.jpg">
                 <div class="product_image">
-                    <img src="assets/short1.jpg" alt="Shorts">
+                    <a class="btn" href="selection.html?id=shorts&name=Shorts&price=40.00&image=assets%2Fshort1.jpg"><img src="assets/short1.jpg" alt="Shorts"></a>
                 </div>
                 <h4>Shorts</h4>
                 <p>$40.00</p>
-                <button class="btn">Add to Cart</button>
+                <a class="btn" href="selection.html?id=shorts&name=Shorts&price=40.00&image=assets%2Fshort1.jpg">Select Size</a>
             </div>
         </div>
     </section>
@@ -83,6 +90,7 @@
         <!-- same footer as index.html -->
     </footer>
 
+    <script src="cart.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

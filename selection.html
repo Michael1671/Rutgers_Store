@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Rutgers Rugby | Selection</title>
+    <style>
+        /* Selection-page-only styles. Move these into style.css whenever convenient. */
+        .selection_page { padding-top: 2rem; padding-bottom: 4rem; }
+        .selection_container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .selection_image { flex: 1 1 300px; max-width: 400px; }
+        .selection_image img {
+            width: 100%;
+            border-radius: 1rem;
+            background-color: var(--extra-light);
+        }
+        .selection_info { flex: 1 1 300px; max-width: 400px; }
+        .selection_info h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        .selection_price {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+        .selection_label {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+        .size_grid {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .size_btn {
+            padding: 0.75rem 1.25rem;
+            border: 2px solid var(--extra-light);
+            background: var(--white);
+            border-radius: 5px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .size_btn:hover { border-color: var(--primary-color); }
+        .size_btn.selected {
+            border-color: var(--primary-color);
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        .size_warning {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .selection_confirmation {
+            text-align: center;
+            padding-block: 3rem;
+            display: none;
+        }
+        .selection_confirmation h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        .selection_confirmation_actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .selection_notfound { text-align: center; padding-block: 3rem; }
+    </style>
+</head>
+<body>
+    <header class="catalogue_header">
+        <div class="section_container catalogue_header_container">
+            <div class="catalogue_header_text">
+                <h1>Size Selection</h1>
+                <p>Gear up with Rutgers Rugby merch</p>
+            </div>
+            <div class="catalogue_header_btns">
+                <a href="index.html" class="btn icon_btn">
+                    <i class="ri-home-4-line"></i>
+                </a>
+                <a href="checkout.html" class="btn icon_btn cart_btn" style="position: relative;">
+                    <i class="ri-shopping-cart-fill"></i>
+                    <span class="cart-count" style="display:none; position:absolute; top:-6px; right:-6px; background: var(--white); color: var(--primary-color); font-size: 0.7rem; font-weight: 700; min-width: 18px; height: 18px; border-radius: 999px; align-items:center; justify-content:center;">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section_container selection_page">
+
+        <div class="selection_container" id="selection-container">
+            <div class="selection_image">
+                <img id="selection-image" src="" alt="">
+            </div>
+            <div class="selection_info">
+                <h2 id="selection-name"></h2>
+                <p class="selection_price" id="selection-price"></p>
+
+                <p class="selection_label">Select a size</p>
+                <div class="size_grid" id="size-grid">
+                    <button class="size_btn" data-size="S">S</button>
+                    <button class="size_btn" data-size="M">M</button>
+                    <button class="size_btn" data-size="L">L</button>
+                    <button class="size_btn" data-size="XL">XL</button>
+                </div>
+                <p class="size_warning" id="size-warning">Please select a size before adding to cart.</p>
+
+                <button class="btn" id="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="selection_confirmation" id="selection-confirmation">
+            <h3>Added to your cart!</h3>
+            <p id="confirmation-detail"></p>
+            <div class="selection_confirmation_actions">
+                <a href="catalogue.html" class="btn">Continue Shopping</a>
+                <a href="checkout.html" class="btn">Go to Checkout</a>
+            </div>
+        </div>
+
+        <div class="selection_notfound" id="selection-notfound" style="display:none;">
+            <p>We couldn't find that product.</p>
+            <a href="catalogue.html" class="btn" style="margin-top:1rem; display:inline-block;">Back to Catalogue</a>
+        </div>
+
+    </section>
+
+    <script src="cart.js"></script>
+    <script src="selection.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
