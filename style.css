@@ -6,7 +6,8 @@
     --text-light: #737373;
     --extra-light: #f4f6f6;
     --white: #ffffff;
-    --max-width: 100%; 
+    --max-width: 100%;
+    --content-max-width: 1200px;
 }
 
 * {
@@ -161,7 +162,8 @@ header {
 }
 .header_container {
     padding: 2.5rem 1.5rem;
-    max-width: calc(var(--max-width) - 2rem);
+    max-width: var(--content-max-width);
+    margin-inline: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -252,6 +254,10 @@ animation: scroll 45s linear infinite;
     to{
         transform: translateX(calc(-50% - 4rem));
     }
+}
+
+.arrival_container {
+    max-width: var(--content-max-width);
 }
 
 .arrival_container .section_header {
