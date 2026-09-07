@@ -37,7 +37,36 @@
                 <div id="checkout-items-list">
                     <!-- checkout_item rows are rendered here by checkout.js -->
                 </div>
-
+                <template id="checkout-item-template">
+  <div class="checkout_item">
+    <label class="checkout_checkbox">
+      <input type="checkbox" class="item-checkbox" checked>
+    </label>
+    <div class="checkout_item_image">
+      <img alt="">
+    </div>
+    <div class="checkout_item_details">
+      <h4></h4>
+      <select class="checkout_item_size_select">
+        <option value="S">Size S</option>
+        <option value="M">Size M</option>
+        <option value="L">Size L</option>
+        <option value="XL">Size XL</option>
+      </select>
+      <div class="checkout_item_footer">
+        <span class="checkout_item_price"></span>
+        <div class="checkout_item_qty">
+          <button class="qty_btn" data-action="decrease">−</button>
+          <span class="qty_value"></span>
+          <button class="qty_btn" data-action="increase">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="checkout_item_remove">
+      <i class="ri-delete-bin-line"></i>
+    </button>
+  </div>
+</template>
                 <p id="checkout-empty" style="display:none; padding: 2rem 0; text-align:center; color: var(--text-light);">
                     Your cart is empty. <a href="catalogue.html">Browse the catalogue</a> to add something.
                 </p>
