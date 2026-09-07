@@ -1,4 +1,4 @@
-const CHECKOUT_API_URL = 'rutgers-store-backend.vercel.ap/api/create-checkout';
+const CHECKOUT_API_URL = 'https://rutgers-store-backend.vercel.app/api/create-checkout';
 
 document.addEventListener('DOMContentLoaded', () => {
   const itemsContainer = document.getElementById('checkout-items-list');
