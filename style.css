@@ -1118,6 +1118,73 @@ footer{
    END CHECKOUT PAGE STYLES
    =================================== */
 
+/* ===================================
+   SUCCESS PAGE STYLES
+   =================================== */
+
+.success_page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 3rem 5rem;
+}
+
+.success_content {
+    max-width: 850px;
+    width: 100%;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--extra-light);
+    border-radius: 2rem;
+}
+
+.success_image {
+    width: 280px;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.success_image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.success_content h1 {
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--text-dark);
+}
+
+.success_content p {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+@media (width > 540px) {
+    .success_content {
+        padding: 4rem 3rem;
+    }
+
+    .success_image{
+        width: 800px;
+    }
+
+    .success_content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* ===================================
+   END SUCCESS PAGE STYLES
+   =================================== */
+
 @media (width > 900px) {
     .checkout_grid {
         grid-template-columns: 2fr 1fr;
