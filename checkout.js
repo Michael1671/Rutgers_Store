@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const checkoutBtn = document.getElementById('checkout-btn');
   const itemTemplate = document.getElementById('checkout-item-template');
 
+  const modalOverlay = document.getElementById('checkout-overlay');
+  const modalClose = document.getElementById('checkout-modal-close');
+  const payVenmoBtn = document.getElementById('pay-venmo-btn');
+  const payStripeBtn = document.getElementById('pay-stripe-btn');
+
   function render() {
     const cart = RugbyCart.getCart();
     itemsContainer.innerHTML = '';
@@ -123,11 +128,51 @@ document.addEventListener('DOMContentLoaded', () => {
     updateTotals();
   });
 
-  checkoutBtn.addEventListener('click', async () => {
+  // --- Payment method modal ---
+
+  function openPaymentModal() {
+    modalOverlay.classList.add('open');
+  }
+
+  function closePaymentModal() {
+    modalOverlay.classList.remove('open');
+  }
+
+  checkoutBtn.addEventListener('click', () => {
+    const selected = getSelectedItems();
+    if (selected.length === 0) return;
+    openPaymentModal();
+  });
+
+  modalClose.addEventListener('click', closePaymentModal);
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) closePaymentModal();
+  });
+
+  // --- Venmo path ---
+
+  payVenmoBtn.addEventListener('click', () => {
     const selected = getSelectedItems();
     if (selected.length === 0) return;
 
-    // Map cart items to the shape the backend expects
+    const cartPayload = selected.map((item) => ({
+      name: item.name,
+      price: item.price,
+      quantity: item.qty,
+      variant: item.variant,
+      image: item.image,
+    }));
+
+    sessionStorage.setItem('venmo_checkout_cart', JSON.stringify(cartPayload));
+    window.location.href = 'venmo.html';
+  });
+
+  // --- Stripe path (with card processing fee) ---
+
+  payStripeBtn.addEventListener('click', async () => {
+    const selected = getSelectedItems();
+    if (selected.length === 0) return;
+
     const cartPayload = selected.map((item) => ({
       name: item.name,
       price: item.price,
@@ -135,9 +180,19 @@ document.addEventListener('DOMContentLoaded', () => {
       variant: item.variant,
     }));
 
-    const originalText = checkoutBtn.textContent;
-    checkoutBtn.disabled = true;
-    checkoutBtn.textContent = 'Redirecting to payment...';
+  
+    const subtotal = selected.reduce((sum, i) => sum + i.price * i.qty, 0);
+    const fee = Math.round((subtotal * 0.03 + 0.3) * 100) / 100;
+
+    cartPayload.push({
+      name: 'Card Processing Fee',
+      price: fee,
+      quantity: 1,
+    });
+
+    const originalText = payStripeBtn.textContent;
+    payStripeBtn.disabled = true;
+    payStripeBtn.textContent = 'Redirecting to payment...';
 
     try {
       const response = await fetch(CHECKOUT_API_URL, {
@@ -156,8 +211,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (err) {
       console.error('Checkout error:', err);
       alert('Something went wrong starting checkout. Please try again.');
-      checkoutBtn.disabled = false;
-      checkoutBtn.textContent = originalText;
+      payStripeBtn.disabled = false;
+      payStripeBtn.textContent = originalText;
+      closePaymentModal();
     }
   });
 

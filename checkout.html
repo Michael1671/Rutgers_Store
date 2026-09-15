@@ -94,9 +94,22 @@
                         <span>Total</span>
                         <span id="summary-total">$0.00</span>
                     </div>
-                    <a href="venmo.html">
                     <button class="btn checkout_btn" id="checkout-btn">Checkout Now (0)</button>
+                </div>
+                <div class="modal_overlay" id="checkout-overlay">
+                    <div class="modal_box">
+                    <button class="modal_close" id="checkout-modal-close">
+                    <i class="ri-close-line"></i>
+                    </button>
+                    <h3>How would you like to pay</h3>
+                    <div class="modal_options">
+                    <a href="venmo.html" id = "pay-venmo-btn"class="btn modal_btn">
+                        Venmo
                     </a>
+                    <a href="" id = "pay-stripe-btn"class="btn modal_btn">
+                    Debit(Extra 3%+$0.30)
+                    </a>
+                </div>
                 </div>
 
                 <div class="summary_card">
