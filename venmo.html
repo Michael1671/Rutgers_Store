@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Rutgers Rugby | Venmo</title>
+</head>
+<body>
+    <header class="catalogue_header">
+        <div class="section_container catalogue_header_container">
+            <div class="catalogue_header_text">
+                <h1>Almost there</h1>
+                <p>Thanks for your support</p>
+            </div>
+            <div class="catalogue_header_btns">
+                <a href="index.html" class="btn icon_btn">
+                    <i class="ri-home-4-line"></i>
+                </a>
+                <a href="checkout.html" class="btn icon_btn cart_btn" style="position: relative;">
+                    <i class="ri-shopping-cart-fill"></i>
+                    <span class="cart-count" style="display:none; position:absolute; top:-6px; right:-6px; background: var(--white); color: var(--primary-color); font-size: 0.7rem; font-weight: 700; min-width: 18px; height: 18px; border-radius: 999px; align-items:center; justify-content:center;">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class = "section_container venmo_page">
+        <div class="venmo_content">
+            <div class = "venmo_image">
+                <img src="assets/venmo_placeholder.webp">
+            </div>
+            <div class = "venmo_input">
+                <form action="/checkout.js" method="post">
+                    <div class = "form_group">
+                        <label for="venmo_user">Venmo account:</label>
+                        <input type = "text" id="venmo_user" name="venmo_account" placeholder="Your Venmo">
+                        <label for="order_name">Name:</label>
+                        <input type="text" id="order_name" name="name" placeholder="Your Name">
+                    </div>
+                    <input type="submit" value="Submit" class="btn venmo_submit">
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+</body>

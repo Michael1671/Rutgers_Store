@@ -230,30 +230,10 @@ header {
     background-color: var(--primary-color);
 }
 
-
 .banner{
     padding-block: 4rem;
     overflow: hidden;
     background-color: var(--primary-color);
-}
-
-.banner_container {
-width: max-content;
-display: flex;
-align-items: center;
-gap: 8rem;
-
-animation: scroll 45s linear infinite;
-}
-
-.banner_container img {
-    height: 50px;
-}
-
-@keyframes scroll {
-    to{
-        transform: translateX(calc(-50% - 4rem));
-    }
 }
 
 .arrival_container {
@@ -315,12 +295,6 @@ animation: scroll 45s linear infinite;
     color: var(--text-dark);
 }
 
-.arrival_content a{
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--text-light);
-}
-
 .arrival_content .explore_link {
     font-size: 1.2rem;
     font-weight: 500;
@@ -335,197 +309,6 @@ animation: scroll 45s linear infinite;
     font-size: 1.5rem;
     color: var(--text-light);
     padding-bottom: 5rem;
-}
-
-.sale {
-    background-color: var(--primary-color);
-}
-
-.sale_container {
-    padding-block: 1rem 0;
-    display: grid;
-    gap: 2rem;
-    overflow: hidden;
-}
-
-.sale_image img{
-    max-width: 500px;
-    margin-inline: auto;
-    filter: drop-shadow(20px 20px 15px rgba(0,0,0,0.5));
-}
-
-.sale_content{
-    padding-bottom: 4rem;
-}
-
-.sale_content h2{
-    margin-bottom: 1rem;
-    font-size: 5rem;
-    font-weight: 800;
-    line-height: 5.75rem;
-}
-.sale_content h2 span{
-    position: relative;
-    isolation: isolate;
-}
-
-.sale_content h2 span::before{
-    position: absolute;
-    content: "";
-    top: 0;
-    left: -1rem;
-    height: calc(100% - 10px);
-    width: calc(100% + 4rem);
-    background-color: var(--white);
-    transform: rotate(-2deg);
-    z-index: -1;
-}
-
-.sale_content p{
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--text-dark);
-}
-
-.sale_content h4{
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-dark);
-}
-
-.sale_btn .btn:hover {
-    color: var(--text-dark);
-    background-color: var(--white);
-}
-
-.favourite_container{
-    overflow: hidden;
-}
-
-.favourite_container .section_header {
-    margin-bottom: 4rem;
-    max-width: fit-content;
-}
-
-.favourite_container .section_container::before{
-    content: "";
-}
-
-.favourite_grid{
-    display: grid;
-    gap: 2rem;
-}
-
-.favourite_card {
-    max-width: 575px;
-    margin-inline: auto;
-}
-
-.favourite_image {
-    margin-bottom: 1rem;
-    border-radius: 1rem;
-    overflow: hidden;
-}
-
-.favourtie_image img{
-    transition: 0.3;
-}
-
-.favourite_card:hover .favourite_image img {
-    transform: scale(1.1);
-}
-
-.favourite_content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.favourite_content h4{
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--text-light);
-}
-
-.favourite_content a:hover{
-    color: var(--primary-color);
-}
-
-.favourite_content span{
-    font-size: 1.5rem;
-    color: var(--text-light);
-}
-
-.download_container{
-    display: grid;
-    gap: 2rem;
-    overflow:hidden;
-}
-
-.download_image img {
-    display: grid;
-    gap: 2rem;
-    overflow: hidden;
-}
-
-.download_content .section_header{
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.download_content p{
-    margin-bottom: 2rem;
-    color: var(--text-light);
-    text-align: center;
-}
-
-.download_links{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.promo{
-    background-color: var(--primary-color);
-}
-
-.promo_container .section_header{
-    max-width: 700px;
-    margin-inline: auto;
-    margin-bottom: 1rem;
-    color: var(--white);
-    text-align: center;
-    line-height: 3,25rem;
-}
-
-.promo_container p{
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-    color: var(--white);
-    text-align: center;
-}
-
-.promo_container form{
-    width: 100%;
-    max-width: 400px;
-    margin-inline: auto;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    background-color: var(--white);
-    border-radius: 5px;
-}
-
-.promo_container input{
-    width: 100%;
-    padding-inline: 1rem;
-    outline: none;
-    border: none;
-    font-size: 1rem;
-    color: var(--text-dark);
 }
 
 footer{
@@ -591,23 +374,12 @@ footer{
     color: var(--white);
 }
 
-.footer_bar{
-    padding: 1rem;
-    font-size:0.9rem;
-    color: var(--text-light);
-    text-align: center;
-}
-
 /* ===================================
    CATALOGUE PAGE STYLES
    =================================== */
 
 .catalogue_page {
     padding-top: 2rem;
-}
-
-.catalogue_top {
-    background-color: var(--primary-color);
 }
 
 .catalogue_header {
@@ -672,8 +444,6 @@ footer{
     background-color: var(--extra-light);
 }
 
-/* Make the <a> wrapper around the product image invisible to layout so the
-   image renders exactly as it did before it became clickable. */
 .product_image a {
     display: contents;
 }
@@ -772,19 +542,6 @@ footer{
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .sale_container{
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-    }
-
-    .sale_content{
-        padding-block: 4rem;
-    }
-
-    .favourite_grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .catalogue_header_text h1 {
         font-size: 2.5rem;
     }
@@ -792,24 +549,6 @@ footer{
     .catalogue_grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 4rem 2.5rem;
-    }
-
-    .download_container{
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-    }
-
-    .download_image{
-        grid-area: 1/2/2/3;
-    }
-
-    .download_content :is(.section_header, p){
-        max-width: 400px;
-        text-align: left;
-    }
-
-    .download_links{
-        justify-content: flex-start;
     }
 
     .footer_container{
@@ -959,12 +698,6 @@ footer{
     font-weight: 600;
     color: var(--text-dark);
     margin-bottom: 0.25rem;
-}
-
-.checkout_item_variant {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    margin-bottom: 0.75rem;
 }
 
 .checkout_item_size_select {
@@ -1154,13 +887,6 @@ footer{
     display: block;
 }
 
-.success_content h1 {
-    margin-bottom: 0.75rem;
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--text-dark);
-}
-
 .success_content p {
     margin-bottom: 2rem;
     font-size: 1rem;
@@ -1175,15 +901,91 @@ footer{
     .success_image{
         width: 800px;
     }
-
-    .success_content h1 {
-        font-size: 2.5rem;
-    }
 }
 
 /* ===================================
    END SUCCESS PAGE STYLES
    =================================== */
+
+.selection_page { padding-top: 2rem; padding-bottom: 4rem; }
+.selection_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+.selection_image { flex: 1 1 300px; max-width: 400px; }
+.selection_image img {
+    width: 100%;
+    border-radius: 1rem;
+    background-color: var(--extra-light);
+}
+.selection_info { flex: 1 1 300px; max-width: 400px; }
+.selection_info h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+.selection_price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+.selection_label {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+}
+.size_grid {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+.size_btn {
+    padding: 0.75rem 1.25rem;
+    border: 2px solid var(--extra-light);
+    background: var(--white);
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.size_btn:hover { border-color: var(--primary-color); }
+.size_btn.selected {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+.size_warning {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    display: none;
+}
+.selection_confirmation {
+    text-align: center;
+    padding-block: 3rem;
+    display: none;
+}
+.selection_confirmation h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+.selection_confirmation_actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+.selection_notfound { text-align: center; padding-block: 3rem; }
 
 @media (width > 900px) {
     .checkout_grid {
@@ -1191,3 +993,100 @@ footer{
         align-items: start;
     }
 }
+
+/* ================================
+    VENMO PAGE STYLES
+=================================== */
+
+.venmo_page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 3rem 5rem;
+}
+
+.venmo_content{
+    max-width: 580px;
+    width: 100%;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--extra-light);
+    border-radius: 2rem;
+}
+
+.venmo_image {
+    max-width: 400px;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.venmo_image img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.venmo_input{
+    width: 100%;
+}
+
+.venmo_form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    text-align: left;
+}
+
+.form_group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form_group label{
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.form_group input{
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--text-dark);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: var(--extra-light);
+    outline: none;
+    transition: 0.3s;
+}
+
+.form_group input:hover,
+.form_group input:focus{
+    border-color: var(--primary-color);
+}
+
+.venmo_submit {
+    width: 100%;
+    margin-top: 0.75rem;
+    padding-block: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+@media (width > 540px) {
+    .venmo_content {
+        padding: 4rem 3rem;
+    }
+
+    .venmo_image{
+        width: 800px;
+    }
+}
+
+
