@@ -1,4 +1,4 @@
-const CHECKOUT_API_URL = 'https://michael1671.github.io/rutgers-store-backend.vercel.app/api/Ccheckout';
+const CHECKOUT_API_URL = 'https://rutgers-store-backend.vercel.app/api/Ccheckout';
 
 document.addEventListener('DOMContentLoaded', () => {
   const itemsContainer = document.getElementById('checkout-items-list');

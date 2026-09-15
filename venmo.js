@@ -1,4 +1,4 @@
-const VENMO_ORDER_API_URL = 'https://michael1671.github.io/rutgers-store-backend.vercel.app/api/submit-venmo-order';
+const VENMO_ORDER_API_URL = 'https://rutgers-store-backend.vercel.app/api/submit-venmo-order';
 
 document.addEventListener('DOMContentLoaded', () => {
   const cart = JSON.parse(sessionStorage.getItem('venmo_checkout_cart') || '[]');
